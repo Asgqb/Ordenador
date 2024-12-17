@@ -19,6 +19,8 @@
             font-size: 1.2rem;
             display: block;
             width: 100%;
+            margin: 0 auto;
+            max-width: calc(100% - 30px);
         }
         .menu-button:hover {
             background-color: #f0f0f0;
@@ -26,19 +28,40 @@
         .profile-header {
             font-weight: bold;
             font-size: 1.3rem;
+            word-wrap: break-word;
         }
         .back-button img {
-            width: 60px; /* Aumentado el tamaño de la flecha */
+            width: 60px;
             height: auto;
         }
         .header-bar {
             background-color: #e6d9f5;
             border-bottom: 2px solid black;
-            padding: 20px 0; /* Aumentado el padding vertical */
+            padding: 20px 0;
         }
         .header-title {
-            font-size: 1.8rem; /* Aumentado el tamaño del título */
+            font-size: 1.8rem;
             margin: 0;
+        }
+        .menu-container {
+            padding: 0 15px;
+        }
+        
+        /* En pantallas pequeñas (menos de 576px) */
+        @media (max-width: 575px) {
+            .profile-name span {
+                display: block;
+            }
+        }
+        
+        /* En pantallas grandes (576px o más) */
+        @media (min-width: 576px) {
+            .profile-name span {
+                display: inline;
+            }
+            .profile-name span:after {
+                content: " ";
+            }
         }
     </style>
 </head>
@@ -46,17 +69,14 @@
     <!-- Barra Superior -->
     <div class="container-fluid header-bar">
         <div class="row align-items-center">
-            <!-- Flecha -->
             <div class="col-auto text-left">
-                <a href="Inicio.html" class="back-button">
+                <a href="index.html" class="back-button">
                     <img src="Flecha.png" alt="Volver">
                 </a>
             </div>
-            <!-- Título -->
             <div class="col text-center">
                 <h4 class="header-title">Benirrobles</h4>
             </div>
-            <!-- Espacio adicional -->
             <div class="col-auto"></div>
         </div>
     </div>
@@ -65,26 +85,36 @@
     <div class="container mt-4">
         <!-- Información del Usuario -->
         <div class="row mb-3">
-            <div class="col-12 menu-button text-left">
-                <div class="profile-header">Nombre Apellido Apellido</div>
-                <div>Correo: correo@correo.es</div>
+            <div class="col-12">
+                <div class="menu-button text-left">
+                    <div class="profile-header">
+                        <div class="profile-name">
+                            <span>Nombre</span>
+                            <span>Apellido</span>
+                            <span>Apellido</span>
+                        </div>
+                    </div>
+                    <div>Correo: correo@correo.es</div>
+                </div>
             </div>
         </div>
 
         <!-- Opciones -->
-        <div class="row mb-3">
-            <div class="col-12">
-                <a href="#" class="menu-button">Modo oscuro</a>
+        <div class="menu-container">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="#" class="menu-button">Modo oscuro</a>
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-12">
-                <a href="#" class="menu-button">Vibracion</a>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="#" class="menu-button">Vibracion</a>
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-12">
-                <a href="#" class="menu-button">Modo tercera edad</a>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="#" class="menu-button">Modo tercera edad</a>
+                </div>
             </div>
         </div>
     </div>
