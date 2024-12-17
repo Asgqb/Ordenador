@@ -1,0 +1,522 @@
+/* Estilos generales */
+body {
+    background-color: #e6d9f5;
+ }
+ 
+ /* Estilos para páginas con botón flotante */
+ body.has-footer {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+ }
+ 
+ /* Header común para todas las páginas */
+ .header-bar {
+    background-color: #e6d9f5;
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+ }
+ 
+ .header-title {
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+ }
+ 
+ .header-title:hover {
+    color: black;
+    text-decoration: none;
+ }
+ 
+ /* Botón de volver común */
+ .back-button {
+    text-decoration: none;
+    display: inline-block;
+ }
+ 
+ .back-button img {
+    width: 40px;
+    height: auto;
+ }
+ 
+ /* Menú y botones comunes */
+ .menu-button {
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+ }
+ 
+ .menu-button:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: black;
+ }
+ 
+ /* Botón flotante común */
+ .add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #6c5b7b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+ }
+ 
+ .add-button:hover {
+    background-color: #574963;
+    color: white;
+    text-decoration: none;
+ }
+ 
+ /* Página de inicio específico */
+ .inicio .menu-button {
+    font-size: 1.3rem;
+ }
+ 
+ .settings-icon {
+    width: 40px;
+    height: auto;
+ }
+ 
+ .escudo {
+    max-width: 120px;
+    height: auto;
+    margin-top: -40px;
+ }
+ 
+ /* Página de configuración específico */
+ .profile-header {
+    font-weight: bold;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+ }
+ 
+ .menu-container {
+    padding: 0 15px;
+ }
+ 
+ /* Página de advertencias específico */
+ .advertencia-card {
+    border: 2px solid black;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0;
+ }
+ 
+ .advertencia-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+ }
+ 
+ /* Página de reservas específico */
+ .reserva-card {
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ }
+ 
+ .reserva-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ .fecha {
+    font-size: 1rem;
+    color: #666;
+ }
+ 
+ .precio {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+ }
+ 
+ /* Formularios comunes */
+ .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+ }
+ 
+ .form-control {
+    border: 1px solid #000;
+    border-radius: 4px;
+ }
+ 
+ textarea.form-control {
+    min-height: 150px;
+ }
+ 
+ /* Página de crear reserva específico */
+ .create-form .form-container {
+    max-width: 1000px;
+ }
+ 
+ .create-form .form-group {
+    margin-bottom: 25px;
+ }
+ 
+ .create-form .form-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+ }
+ 
+ .create-form .form-control {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    height: 60px;
+    font-size: 1.1rem;
+    background-color: white;
+ }
+ 
+ .create-form select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 45px;
+ }
+ 
+ .create-form .form-control:focus {
+    box-shadow: none;
+    border-color: #6c5b7b;
+ }
+ 
+ .create-form .date-input-container {
+    position: relative;
+ }
+ 
+ .create-form .date-input-container .calendar-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c5b7b;
+    font-size: 1.5rem;
+ }
+ 
+ .create-form .precio-container {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: inline-block;
+    font-size: 1.1rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+ }
+ 
+ .create-form .submit-button {
+    background-color: #6c5b7b;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 60px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+    cursor: pointer;
+ }
+ 
+ .create-form .submit-button:hover {
+    background-color: #574963;
+ }
+ 
+ .create-form .submit-button i {
+    margin-right: 10px;
+ }
+ 
+ /* Página del tiempo - Vista general */
+ .weather-map {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+ }
+ 
+ .weather-map img {
+    width: 100%;
+    height: auto;
+ }
+ 
+ .weather-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+    gap: 15px;
+    padding: 0 30px;
+ }
+ 
+ /* Página del tiempo - Vista detallada */
+ .weather-card {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+ }
+ 
+ .weather-card .info {
+    text-align: center;
+ }
+ 
+ .current-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+ }
+ 
+ .current-temp {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 20px 0;
+ }
+ 
+ .weather-info {
+    font-size: 1.2rem;
+    margin: 10px 0;
+ }
+ 
+ .weather-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 15px;
+ }
+ 
+ .weather-image {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+ }
+ 
+ .weather-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+    gap: 15px;
+    padding: 0 30px;
+ }
+ 
+ /* Elementos comunes del tiempo */
+ .weather-item {
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 120px;
+    text-decoration: none;
+    color: black;
+    display: block;
+ }
+ 
+ .weather-item:hover {
+    background-color: #f8f8f8;
+    text-decoration: none;
+    color: black;
+ }
+ 
+ .hourly-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+ }
+ 
+ .hour-item {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 120px;
+    text-decoration: none;
+    color: black;
+    display: block;
+ }
+ 
+ .hour-item:hover {
+    text-decoration: none;
+    color: black;
+    background-color: #e5e5e5;
+ }
+ 
+ /* Botones comunes */
+ .custom-button {
+    background-color: #6c5b7b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    width: 100%;
+    margin-bottom: 10px;
+ }
+ 
+ .custom-button:hover {
+    background-color: #574963;
+    color: white;
+ }
+ 
+ /* Media queries */
+ @media (max-width: 575px) {
+    .profile-name span {
+        display: block;
+    }
+ }
+ 
+ @media (min-width: 576px) {
+    .profile-name span {
+        display: inline;
+    }
+    .profile-name span:after {
+        content: " ";
+    }
+ }
+ 
+ @media (max-width: 767px) {
+    .buttons-container {
+        padding: 0 30px;
+    }
+    
+    .form-container {
+        padding: 20px 10px;
+    }
+ 
+    .weather-buttons,
+    .hourly-buttons {
+        gap: 10px;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+    
+    .weather-item,
+    .hour-item {
+        width: calc(33.33% - 7px);
+        margin: 0;
+    }
+    
+    .weather-item:last-child,
+    .hour-item:last-child {
+        display: none;
+    }
+ 
+    .weather-image-container {
+        padding: 10px 0;
+    }
+ 
+    .weather-image {
+        width: 150px;
+    }
+ }
+ 
+ @media (min-width: 768px) {
+    .escudo {
+        max-width: 200px;
+        margin-top: -60px;
+    }
+    
+    .settings-icon {
+        width: 60px;
+    }
+ 
+    .add-button {
+        width: 120px;
+        height: 120px;
+        font-size: 5rem;
+    }
+ 
+    .back-button img {
+        width: 60px;
+    }
+ 
+    .container {
+        max-width: 800px;
+    }
+ 
+    .weather-card .info {
+        text-align: left;
+    }
+    
+    .weather-card {
+        margin: 40px auto;
+    }
+    
+    .create-form .form-container {
+        padding: 40px;
+        max-width: 1400px;
+    }
+    
+    .create-form .form-row {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    
+    .create-form .form-col {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .create-form .col-md-8 {
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+    
+    .create-form .col-md-4 {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    
+    .create-form .form-col + .form-col {
+        border-left: 30px solid transparent;
+    }
+ }
+ 
+ @media (min-width: 1400px) {
+    .create-form .form-container {
+        max-width: 1600px;
+    }
+ }
