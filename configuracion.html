@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #e6d9f5; /* Fondo lila */
+            background-color: #e6d9f5;
         }
         .menu-button {
             border: 2px solid black;
@@ -27,21 +27,36 @@
             font-weight: bold;
             font-size: 1.3rem;
         }
-        .back-arrow {
-            font-size: 1.8rem;
+        .back-button img {
+            width: 60px; /* Aumentado el tamaño de la flecha */
+            height: auto;
+        }
+        .header-bar {
+            background-color: #e6d9f5;
+            border-bottom: 2px solid black;
+            padding: 20px 0; /* Aumentado el padding vertical */
+        }
+        .header-title {
+            font-size: 1.8rem; /* Aumentado el tamaño del título */
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <!-- Encabezado -->
-    <div class="container-fluid bg-light p-2">
+    <!-- Barra Superior -->
+    <div class="container-fluid header-bar">
         <div class="row align-items-center">
-            <div class="col-auto">
-                <a href="index.html" class="text-dark back-arrow">&larr;</a>
+            <!-- Flecha -->
+            <div class="col-auto text-left">
+                <a href="Inicio.html" class="back-button">
+                    <img src="Flecha.png" alt="Volver">
+                </a>
             </div>
+            <!-- Título -->
             <div class="col text-center">
-                <h4 class="m-0">Benirrobles</h4>
+                <h4 class="header-title">Benirrobles</h4>
             </div>
+            <!-- Espacio adicional -->
             <div class="col-auto"></div>
         </div>
     </div>
