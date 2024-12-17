@@ -3,48 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Advertencia - Benirrobles</title>
+    <title>Mis Advertencias - Benirrobles</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             background-color: #e6d9f5;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 80px;
         }
         .header-bar {
             background-color: #e6d9f5;
             border-bottom: 2px solid black;
             padding: 15px 0;
         }
+        .back-button {
+            text-decoration: none;
+            display: inline-block;
+        }
         .back-button img {
             width: 40px;
             height: auto;
-        }
-        .custom-button {
-            background-color: #6c5b7b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 30px;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        .custom-button:hover {
-            background-color: #574963;
-            color: white;
-        }
-        .form-control {
-            border: 1px solid #000;
-            border-radius: 4px;
-        }
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        textarea.form-control {
-            min-height: 150px;
-        }
-        .buttons-container {
-            padding: 0 15px;
         }
         .header-title {
             margin: 0;
@@ -57,12 +36,49 @@
             color: black;
             text-decoration: none;
         }
-        @media (max-width: 767px) {
-            .buttons-container {
-                padding: 0 30px;
-            }
-            .form-container {
-                padding: 20px 10px;
+        .advertencia-card {
+            border: 2px solid black;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0;
+        }
+        .advertencia-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .add-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #6c5b7b;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .add-button:hover {
+            background-color: #574963;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Media query para pantallas grandes */
+        @media (min-width: 768px) {
+            .add-button {
+                width: 120px;
+                height: 120px;
+                font-size: 5rem;
+                border-radius: 20px;
+                bottom: 30px;
+                right: 30px;
             }
         }
     </style>
@@ -83,39 +99,36 @@
         </div>
     </div>
 
-    <!-- Contenido Principal -->
-    <div class="form-container">
-        <h2 class="text-center my-4">Crear Advertencia</h2>
-        
-        <form>
-            <!-- Título -->
-            <div class="form-group px-3">
-                <h3>Titulo</h3>
-                <input type="text" class="form-control" placeholder="Titulo">
-            </div>
+    <!-- Título Principal -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Mis Advertencias</h2>
 
-            <!-- Descripción -->
-            <div class="form-group px-3">
-                <h3>Descripcion</h3>
-                <textarea class="form-control" placeholder="Descripcion"></textarea>
-            </div>
+        <!-- Lista de Advertencias -->
+        <div class="advertencia-card">
+            <div class="advertencia-title">Advertencia 1</div>
+            <div>Descripcion advertencia</div>
+        </div>
 
-            <!-- Botones -->
-            <div class="buttons-container">
-                <div class="row mt-4">
-                    <div class="col-12 col-md-4 mb-3">
-                        <button type="button" class="custom-button">IMAGENES</button>
-                    </div>
-                    <div class="col-12 col-md-4 mb-3">
-                        <button type="button" class="custom-button">GPS</button>
-                    </div>
-                    <div class="col-12 col-md-4 mb-3">
-                        <button type="button" class="custom-button">CREAR</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+        <div class="advertencia-card">
+            <div class="advertencia-title">Advertencia 2</div>
+            <div>Descripcion advertencia</div>
+        </div>
+
+        <div class="advertencia-card">
+            <div class="advertencia-title">Advertencia 3</div>
+            <div>Descripcion advertencia</div>
+        </div>
+
+        <div class="advertencia-card">
+            <div class="advertencia-title">Advertencia 4</div>
+            <div>Descripcion advertencia</div>
+        </div>
     </div>
+
+    <!-- Botón Añadir -->
+    <a href="crearadvertencia.html" class="add-button">
+        +
+    </a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
