@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- [Head section remains the same until styles] -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
+        /* [Previous styles remain the same until media queries] */
         body {
             background-color: #e6d9f5;
         }
@@ -118,15 +120,21 @@
             text-decoration: none;
             color: black;
         }
+
         @media (max-width: 767px) {
             .weather-buttons,
             .hourly-buttons {
-                flex-wrap: wrap;
                 gap: 10px;
+                padding: 0 20px;
+                justify-content: space-between;
             }
             .weather-item,
             .hour-item {
-                width: calc(50% - 5px);
+                width: calc(33.33% - 7px);
+            }
+            .weather-item:last-child,
+            .hour-item:last-child {
+                display: none;
             }
             .weather-image-container {
                 padding: 10px 0;
@@ -135,6 +143,7 @@
                 width: 150px;
             }
         }
+        
         @media (min-width: 768px) {
             .weather-card .info {
                 text-align: left;
@@ -145,6 +154,7 @@
         }
     </style>
 </head>
+<!-- [Rest of the HTML remains exactly the same] -->
 <body>
     <!-- Barra Superior -->
     <div class="container-fluid header-bar">
