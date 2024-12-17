@@ -1,1 +1,86 @@
-H
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreación Página Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e6d9f5; /* Color de fondo */
+        }
+        .menu-button {
+            border: 2px solid black;
+            background-color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem; /* Texto más grande */
+            display: block;
+        }
+        .menu-button:hover {
+            background-color: #f0f0f0;
+        }
+        .settings-icon {
+            width: 40px;
+            height: auto;
+        }
+        .escudo {
+            max-width: 120px;
+            height: auto;
+            margin-top: -40px; /* Ajustar la posición */
+        }
+    </style>
+</head>
+<body>
+    <!-- Configuración Arriba a la Derecha -->
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <div class="col-12 text-right p-2">
+                <a href="configuracion.html">
+                    <img src="configuracion.png" alt="Configuración" class="settings-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Escudo Centrado -->
+    <div class="container text-center">
+        <img src="logo.png" alt="Escudo" class="escudo">
+    </div>
+
+    <!-- Menú de botones -->
+    <div class="container mt-3">
+        <div class="row mb-3">
+            <div class="col-12">
+                <a href="advertencias.html" class="menu-button">1. Advertencias</a>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <a href="instalaciones.html" class="menu-button">2. Instalaciones</a>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <a href="juego-historia.html" class="menu-button">3. Juego Historia</a>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <a href="biblioteca.html" class="menu-button">4. Biblioteca</a>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <a href="tiempo.html" class="menu-button">5. Tiempo</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
