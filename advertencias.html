@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Advertencia - Benirrobles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e6d9f5;
+        }
+        .header-bar {
+            background-color: #e6d9f5;
+            border-bottom: 2px solid black;
+            padding: 15px 0;
+        }
+        .back-button img {
+            width: 40px;
+            height: auto;
+        }
+        .custom-button {
+            background-color: #6c5b7b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .custom-button:hover {
+            background-color: #574963;
+            color: white;
+        }
+        .form-control {
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        textarea.form-control {
+            min-height: 150px;
+        }
+        .buttons-container {
+            padding: 0 15px;
+        }
+        @media (max-width: 767px) {
+            .buttons-container {
+                padding: 0 30px;
+            }
+            .form-container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Superior -->
+    <div class="container-fluid header-bar">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <a href="index.html" class="back-button">
+                    <img src="Flecha.png" alt="Volver">
+                </a>
+            </div>
+            <div class="col text-center">
+                <h4 class="m-0">Benirrobles</h4>
+            </div>
+            <div class="col-auto"></div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="form-container">
+        <h2 class="text-center my-4">Crear Advertencia</h2>
+        
+        <form>
+            <!-- Título -->
+            <div class="form-group px-3">
+                <h3>Titulo</h3>
+                <input type="text" class="form-control" placeholder="Titulo">
+            </div>
+
+            <!-- Descripción -->
+            <div class="form-group px-3">
+                <h3>Descripcion</h3>
+                <textarea class="form-control" placeholder="Descripcion"></textarea>
+            </div>
+
+            <!-- Botones -->
+            <div class="buttons-container">
+                <div class="row mt-4">
+                    <div class="col-12 col-md-4 mb-3">
+                        <button type="button" class="custom-button">IMAGENES</button>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <button type="button" class="custom-button">GPS</button>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <button type="button" class="custom-button">CREAR</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
