@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #e6d9f5; /* Color de fondo */
+            background-color: #e6d9f5;
         }
         .menu-button {
             border: 2px solid black;
@@ -17,7 +17,7 @@
             width: 100%;
             text-decoration: none;
             color: black;
-            font-size: 1.3rem; /* Texto más grande */
+            font-size: 1.3rem;
             display: block;
         }
         .menu-button:hover {
@@ -30,7 +30,15 @@
         .escudo {
             max-width: 120px;
             height: auto;
-            margin-top: -40px; /* Ajustar la posición */
+            margin-top: -40px;
+        }
+        
+        /* Media query para pantallas grandes */
+        @media (min-width: 768px) {
+            .escudo {
+                max-width: 200px; /* Logo más grande en pantallas grandes */
+                margin-top: -60px; /* Ajuste del margen superior para el logo más grande */
+            }
         }
     </style>
 </head>
