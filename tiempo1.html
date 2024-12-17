@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El tiempo - Benirrobles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e6d9f5;
+        }
+        .header-bar {
+            background-color: #e6d9f5;
+            border-bottom: 2px solid black;
+            padding: 15px 0;
+        }
+        .back-button {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-button img {
+            width: 40px;
+            height: auto;
+        }
+        .header-title {
+            margin: 0;
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .header-title:hover {
+            color: black;
+            text-decoration: none;
+        }
+        .weather-card {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .weather-card .info {
+            text-align: center;
+        }
+        .current-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .current-temp {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .weather-info {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .weather-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 15px;
+        }
+        .weather-image {
+            max-width: 100%;
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+        }
+        .weather-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 600px;
+            gap: 15px;
+            padding: 0 30px;
+        }
+        .weather-item {
+            text-align: center;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 120px;
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .weather-item:hover {
+            text-decoration: none;
+            color: black;
+            background-color: #f8f8f8;
+        }
+        .hourly-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .hour-item {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 120px;
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .hour-item:hover {
+            text-decoration: none;
+            color: black;
+        }
+        @media (max-width: 767px) {
+            .weather-buttons,
+            .hourly-buttons {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .weather-item,
+            .hour-item {
+                width: calc(50% - 5px);
+            }
+            .weather-image-container {
+                padding: 10px 0;
+            }
+            .weather-image {
+                width: 150px;
+            }
+        }
+        @media (min-width: 768px) {
+            .weather-card .info {
+                text-align: left;
+            }
+            .weather-card {
+                margin: 40px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra Superior -->
+    <div class="container-fluid header-bar">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <a href="Inicio.html" class="back-button">
+                    <img src="Flecha.png" alt="Volver">
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="Inicio.html" class="header-title">Benirrobles</a>
+            </div>
+            <div class="col-auto"></div>
+        </div>
+    </div>
+
+    <!-- Título -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">El tiempo</h2>
+
+        <!-- Tarjeta del Tiempo Actual -->
+        <div class="weather-card">
+            <div class="row align-items-center">
+                <!-- Información del tiempo -->
+                <div class="col-md-8 info">
+                    <div class="current-time">Lunes 18:45</div>
+                    <div class="current-temp">8°</div>
+                    <div class="weather-info">
+                        <i class="fas fa-cloud-rain mr-2"></i>
+                        Lloviendo
+                    </div>
+                    <div class="weather-info">Humedad: 27%</div>
+                    <div class="weather-info">Sensación térmica: 7°</div>
+                </div>
+                <!-- Imagen del clima -->
+                <div class="col-md-4">
+                    <div class="weather-image-container">
+                        <img src="tiempo.svg" alt="Imagen del clima" class="weather-image">
+                    </div>
+                </div>
+            </div>
+            <!-- Pronóstico por Horas -->
+            <div class="hourly-buttons">
+                <a href="#" class="hour-item">
+                    <div>19</div>
+                    <div>8°</div>
+                    <i class="fas fa-cloud-rain"></i>
+                </a>
+                <a href="#" class="hour-item">
+                    <div>20</div>
+                    <div>6°</div>
+                    <i class="fas fa-cloud"></i>
+                </a>
+                <a href="#" class="hour-item">
+                    <div>21</div>
+                    <div>5°</div>
+                    <i class="fas fa-cloud-rain"></i>
+                </a>
+                <a href="#" class="hour-item">
+                    <div>22</div>
+                    <div>5°</div>
+                    <i class="fas fa-cloud"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Pronóstico por Días -->
+        <div class="weather-buttons">
+            <a href="tiempo1.html" class="weather-item">
+                <div>L</div>
+                <div>13°</div>
+                <i class="fas fa-cloud-rain"></i>
+            </a>
+            <a href="tiempo1.html" class="weather-item">
+                <div>M</div>
+                <div>14°</div>
+                <i class="fas fa-cloud"></i>
+            </a>
+            <a href="tiempo1.html" class="weather-item">
+                <div>X</div>
+                <div>13°</div>
+                <i class="fas fa-cloud-rain"></i>
+            </a>
+            <a href="tiempo1.html" class="weather-item">
+                <div>J</div>
+                <div>17°</div>
+                <i class="fas fa-sun"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

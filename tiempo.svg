@@ -1,0 +1,46 @@
+
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="black"
+>
+  <!-- Nube -->
+  <path
+    d="M43 20a12 12 0 00-22.83-3.51A9 9 0 009 26a9 9 0 009 9h25a9 9 0 000-18z"
+    fill="none"
+    stroke="black"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Lluvia -->
+  <line
+    x1="18"
+    y1="45"
+    x2="18"
+    y2="55"
+    stroke="black"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+  <line
+    x1="30"
+    y1="45"
+    x2="30"
+    y2="55"
+    stroke="black"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+  <line
+    x1="42"
+    y1="45"
+    x2="42"
+    y2="55"
+    stroke="black"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>
